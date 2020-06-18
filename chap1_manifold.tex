@@ -1,0 +1,1122 @@
+\chapter{预备知识}
+	\noindent
+	%\hangafter=1\hangindent 3.5em
+	{\textbf{1.1\ 证:}}令$V=\mathbb{R}^n,\  A=\mathbb{R}^n,\ $ 则\  $\forall\,x,\ y\in{A}$,\ 令\ $\overrightarrow{xy}=y-x\,$则有：
+	\begin{itemize}
+		\item[\textcircled{1}]
+		$\forall\ x\in{A},\ \overrightarrow{xx}=x-x=\mathit{0}$,
+		\item[\textcircled{2}]
+		$\forall\ x\in{A},\ v\in{V},\ $令\ $y=x+v\in{V}$.\ 则\ $\overrightarrow{xy}=y-x=v$.\ 若另有\ $y',\ s.\ t.\ \overrightarrow{xy'}=v$,\ 则\ $y'-x=v\Rightarrow y'=x+v=y$\ 从而\ y\ 唯一,
+		\item[\textcircled{3}]
+		$\forall\ x,y,z\in A.\ \overrightarrow{xy}+\overrightarrow{yz}=(y-x)+(z-y)=z-y=\overrightarrow{yz}.\ $
+	\end{itemize}
+	所以 \ $\mathbb{R}^n$\ 是一个n维仿射空间，它以 \ $\mathbb{R}^n$\ 自身为它的伴随向量空间。
+	\\
+	\\
+	
+	\noindent
+	{\textbf{1.2\ 证:}}
+	\begin{itemize}
+		\item[\textcircled{1}]
+		$\forall\  P,Q\in E^n,\ 0\leqslant d(P,Q)=\left|\overrightarrow{PQ}\right|<+\infty,$\ 且$d(P,Q)=0\Leftrightarrow\left|\overrightarrow{PQ}\right|=0\Leftrightarrow P=Q,$ 
+		\item[\textcircled{2}] 
+		$\forall\ P,Q\in E^n,\ d(P,Q)=\left|\overrightarrow{PQ}\right|=\left|\overrightarrow{QP}\right|=d(Q,P),$
+		\item[\textcircled{3}] 
+		$\forall\  P, Q, R\in E^n,\  d(P,R)=\left|\overrightarrow{PR}\right|=\left|\overrightarrow{PQ}+\overrightarrow{QR}\right|\leqslant\left|\overrightarrow{PQ}\right|+\left|\overrightarrow{QR}\right|\leqslant d(Q,P).$
+	\end{itemize}
+	从而\ $E^n$\ 关于距离函数\ $d$\ 成为一个度量。
+	\\
+	\\
+	
+	
+	\noindent
+	{\textbf{1.3\ 证:}}
+	\begin{itemize}
+		\item[(1)] 记\ $E^n$\ 的全体开子集为\ $\tau$,
+		\begin{itemize}
+			\item[\textcircled{1}] 显然\ $\emptyset,\ E^n\in\tau,$
+			\item[\textcircled{2}] $\forall\ A\in{\tau},\ B\in \tau ,\ $
+			若\ $A\cap B=\emptyset,\ $则\ $A\cap B\in \tau,\ $
+			\\
+			若\ $A\cap B\neq \emptyset,\ $则\ $\forall\ P\in A\cap B,\ $即\ $P\in A$\ 且\ $P\in B,\ $
+			\\
+			则\ $\exists\ \varepsilon_1,\ \varepsilon_2 >0,\ s.\ t.\ P\in B_{\varepsilon_1} (P)\subset A,\ P\in B_{\varepsilon_2} (P) \subset B $,\ 取\ $\varepsilon=min {\left\{\varepsilon_1,\varepsilon_2\right\}}$,\ 
+			则\ $P\in
+			B_\varepsilon(P)=B_{\varepsilon_1}(P)\cap B_{\varepsilon_2}(P)\subset A\cap B,\ $因而\ $A\cap B\in \tau.$
+			\item[\textcircled{3}] 若\ $A_\alpha (\alpha\in I)\in \tau, \ $则\ $\forall\ P\in \bigcup\limits_{\alpha\in I} A_\alpha,\ \exists\ i\in I,\ s.\ t.\ P\in A_i\in \tau,\ $
+			\\
+			则\ $\exists\  \varepsilon>0,\ s.\ t.\ P\in B_\varepsilon (P)\in A_i,\ $从而\ $B_\epsilon (P)\subset\bigcup\limits_{\alpha\in I} A_\alpha,\ $从而\ $\bigcup\limits_{\alpha\in I} A_\alpha\in\tau.\ $
+		\end{itemize}
+		所以,\ $\tau$\ 为\ $E^n$\ 的一个拓扑。
+		\item[(2)] 
+		$\forall\ P,Q\in E$\ 且\ $P\neq Q.\ $\ 则记\ $d=d(P,Q)$,\ 取\ $\varepsilon_1=\varepsilon_2=\frac{d}{3}$,\ 则\ $P\in B_{\varepsilon_1(P)}$（开）,\ $Q\in B_{\varepsilon_2}(Q)$（开），且\ $B_{\varepsilon_1}(P)\cup B_{\varepsilon_2}(Q)=\emptyset$,\  
+		\\
+		否则,\ 若\ $\exists\ R\in B_{\varepsilon_1}(P)\cap B_{\varepsilon_2}(Q)$,\ 则\ $d(Q,R)<\frac{d}{3},d(Q,R)<\frac{d}{3},
+		\\
+		d=d(P,Q)\leq d(P,R)+d(Q,R)<\frac{2d}{3}<d$\ 矛盾！\ 所以\ $B_{\varepsilon_1}(P)\cup B_{\varepsilon_2}(Q)=\emptyset$\ 成立.
+		\\
+		从而,\ $E_n$\ 满足\ $T_2$\  分离性公理,\ 为\ Hausdorff\ 空间.
+		\item[(3)] 
+		取开集族\ $\mathscr{B}=\left\{ B_{\varepsilon}(P)|P\in \mathbb{Q}^n,\varepsilon\in \mathbb{Q} \right\} $,\ 其中\ $\mathbb{Q}$\ 为有理数，故\ $\mathscr{B}$\ 为可数的，下证其为拓扑基：
+		\\
+		$\forall \ P\in E_n,\quad
+		\forall \ U=B_\varepsilon(P) \in N(P),\ 
+		\\
+		\exists\ \varepsilon'>0,$\ 且\ $\varepsilon'\in \mathbb{Q},\ s.\ t.\ \frac{3\varepsilon}{4}<\varepsilon'<\varepsilon.\quad 
+		\exists\ Q \in \mathbb{Q}^n,\ s.\ t.\ \left|\overrightarrow{PQ}\right|<\frac{\varepsilon '}{4}$,
+		\\
+		令\ $B=B_{\varepsilon'}(Q),$\ 则\ $B\subset U\in $\ 且\ $B\in \mathscr{B}$.
+		\\
+		所以,\ $\mathscr{B}$\ 为\ $E^n$\ 中可数拓扑基,\ 从而\ $E^n$\ 第二可数。
+	\end{itemize}
+	
+	
+	
+	\noindent
+	\\
+	{\textbf{1.4\ 证:}}
+	\begin{itemize}
+		\item[(1)]
+		任取\ $E_n$\ 中直线\ $l$,\ 在\ $l$\ 上依次任取3个不同的点\ $P,Q,R$,\ 则有\ $\left|\overrightarrow{OQ}\right|=t\left|\overrightarrow{OP}\right|+\left|\overrightarrow{OR}\right|$,\ 其中\ $t\in (0,1)$.\ 记\ $\sigma(P)=P'\quad(\forall\ P\in E_n)$
+		\\
+		则\ $\left|\overrightarrow{O'Q'}\right|=\left|\overrightarrow{OQ}\right|=t\left|\overrightarrow{OP}\right|+(1-t)\left|\overrightarrow{OR}\right|=t\left|\overrightarrow{O'P'}\right|+(1-t)\left|\overrightarrow{O'R'}\right|\quad (t\in (0,1))$
+		\\
+		$\therefore\ P',Q',R'$\ 三点共线且保持分比，所以\ $\sigma$\ 将直线映为直线.
+		\item[(2)]
+		任取\ $E_n$\ 中两平行直线\ $l_1,l_2$,\ 则由（1）知\ $l_1,l_2$\ 在\ $\sigma$\ 下仍为直线，记为\ $l_1',l_2'$.\ 任取不同点\ $A,B\in l_1$,\ 不同点\ $C,D\in l_2$,\ 
+		\\
+		则\ $\overrightarrow{AB},\overrightarrow{CD}$\ 非零，且\ $\overrightarrow{AB}//\overrightarrow{CD}$\ 从而\ $\exists\ \lambda \neq 0,\ s.\ t.\ \overrightarrow{AB}=\lambda\ \overrightarrow{CD}$,
+		\\
+		而\ $\left|\overrightarrow{A'B'}\right|=\left|\overrightarrow{AB}\right|=\left| \lambda \right| \cdot \left|\overrightarrow{CD}\right|=\left| \lambda \right| \cdot \left|\overrightarrow{C'D'}\right|\quad\therefore \overrightarrow{A'B'}//\overrightarrow{C'D'}\quad\therefore\ l_1'//l'_2 $ 
+		\\
+		$\therefore\ $由\ $l_1,l_2$\ 任意性知\ $\sigma$\ 把\ $E_n$\ 中平行直线映为平行直线.
+		\item[(3)] 
+		记\ $\sigma (O)=O',\overrightarrow{OP_i}=\delta_i,\sigma(\delta_i)=\delta_i'=\overrightarrow{O'P'},i=1,2,...n$
+		\\
+		则由\ $\left\{O,\delta_i\right\}$\ 为正交标架知
+		$$
+		\left|\overrightarrow{OP_i}\right|\cdot\left|\overrightarrow{OP_j}\right|=
+		\left\{ 
+		\begin{array}{ll}
+		{0,\ }&i\neq j,
+		\\
+		1, &i=j,
+		\end{array}
+		\right.
+		\quad i,j=1,2,...,n
+		$$
+		$\therefore\ 
+		\left\{
+		O',\delta_i
+		\right\}$
+		\ 也为正交坐标系.
+	\end{itemize}
+	
+	
+	\noindent
+	\\
+	{\textbf{1.5\ 证:}}
+	$\forall\ t\leq 0.\ 
+	\forall\ x=(x_1,...,x_n),\ y=(y_1,...,y_n)\in \mathbb{R}^n$.
+	\\
+	由\ 
+	$d(x,y)=\sqrt{\sum\limits_{i=1}^n (y^i-x^i)^2}$\ 
+	知\ 
+	$d(tx,ty)=td(x,y)$.\ 
+	\\
+	又由\ 
+	$\sigma$\ 
+	为等距变换知\ 
+	$d(\sigma(tx),\sigma(ty)=d(tx,ty)=td(x,y)=td(\sigma(x),\sigma(y))$.\ 
+	\\
+	取\ 
+	$y=\mathit{0}=(0,...,0)$,\ 
+	则\ 
+	$d(\sigma (tx),\sigma (\mathit{0})=t\cdot d(\sigma(x),\sigma (\mathit{0}))$,\ 
+	\\
+	则由\ 
+	$\sigma $\ 
+	保持共线性质而\ 
+	$\overrightarrow{Ox}$\ 
+	与\ 
+	$\overrightarrow{O(tx)}$\ 
+	共线,\ 知\ 
+	$\overrightarrow{\sigma(\mathit{0})\sigma(x)}$\ 
+	与\ 
+	$\overrightarrow{\sigma (\mathit{0})}\sigma(tx)$\ 
+	共线\ 
+	\\
+	$\therefore\ \overrightarrow{\sigma(\mathit{0})\sigma(tx)}=\pm t\overrightarrow{\sigma(\mathit{0})\sigma(x)}$\ 
+	不妨取\ 
+	$+t,(-t$\ 
+	同理可证),\ 则有\ 
+	\\
+	$\sigma (tx)-\sigma(\mathit{0})=t(\sigma (x)-\theta(\mathit{0}))\Rightarrow \sigma (tx)=t\sigma(x)-(1-t)\sigma(\mathit{0})\cdots\cdots\cdots(1)$,\ 
+	\\
+	对（1）式左右两边关于\ t\ 求导得：\ 
+	\begin{align*}
+	\text{左边}&=\frac{\partial}{\partial t}\sigma_1(tx)
+	\\
+	&=(\frac{\partial}{\partial t}\sigma_1(tx),...\ ,\frac{\partial}{\partial t}\sigma_n(tx)) 
+	\\
+	&=(x_1,...,\ x_n)\cdot
+	\left(
+	\begin{array}{ccc}
+	\partial_1\sigma_1(tx)  &  \cdots & \partial_1\sigma_n(tx)
+	\\
+	\colon                  &\        &\colon
+	\\
+	\partial_n\sigma_1(tx)  &\cdots   &\partial_n\sigma_n(tx)
+	\end{array}
+	\right)
+	\\
+	\text{左边}&=\sigma(x)-\sigma (\mathit{0})
+	\end{align*}
+	则左边=右边，且令\ t=0\ 后有：\
+	$$
+	\sigma(x)=\sigma (\mathit{0})+
+	(x_1,...,\ x_n)\cdot
+	\left.
+	\left(
+	\begin{array}{ccc}
+	\partial_1\sigma_1(tx)  &  \cdots & \partial_1\sigma_n(tx)
+	\\
+	\colon                  &\        &\colon
+	\\
+	\partial_n\sigma_1(tx)  &\cdots   &\partial_n\sigma_n(tx)
+	\end{array}
+	\right)
+	\right|_{t=0}                                              
+	$$
+记\ 
+$a_0^j=\sigma_i(0)\qquad a_i^j=(\partial_i\sigma_j)|_(t=0)\qquad$
+其中\ 
+$ i=1,2,...,n.\quad j=1,2,...,n.\  \text{有:}\ $
+$$
+\sigma(x_1,...x_n)=(a_0^1,...,a_0^n)+(x_1,...,x_n)\cdot
+                    \left(
+                    \begin{array}{ccc}
+                    a^1_1 &\cdots &a_1^n
+                    \\
+                    \colon&\      &\colon
+                    \\
+                    a_n^1 &\cdots &a_n^n
+                    \end{array}
+                    \right)
+$$
+取\
+$\varepsilon_i=(0,...,\overset{\overset{\text{第i个}}{\downarrow}}{1},0,...0)$,\
+则,\
+\\
+$1=d(\varepsilon_i,0)=d(\sigma(\varepsilon_i),\sigma(\mathit{0}))\Rightarrow (a_i^1)^2+(a_i^2)^2+\cdots+(a_i^n)^2=1\ (\forall\ i=1,2,...,n)$
+\\
+$(i\neq j\ \text{时})$
+\begin{align*}
+2=1^2+1^2&=d^2(\varepsilon_i,\varepsilon_j)
+\\
+         &=d^2(\sigma(\varepsilon_i),\sigma(\varepsilon_j))
+\\
+         &=(a_j^1-a_i^1)^2+\cdots +(a_j^n-a_i^n)^2
+\\
+         &=((a_i^1)^2+\cdots+(a_i^n)^2)+((a_j^1)^2+\cdots+(a_j^n)^2)-2(a_j^1a_i^1+\cdots+a_j^n a_i^n)
+\\
+         &=1+1-2(a_j^1a_i^1+\cdots+a_j^n a_i^n)
+\\
+\Rightarrow
+a_j^1a_i^1+\cdots+a_j^n a_i^n=0\ (\ i\neq j\ \text{时}\ )
+\end{align*}
+$\text{从而}\ (a_i^j)_{n\times n}\text{为单位正交矩阵. } $
+\\
+\\
+\\	
+\noindent
+{\textbf{1.6\ 证:}}
+设\ Q\ 关于\
+$\left\{
+O;\delta_i
+\right\}$\
+的坐标为:\
+$x=(x^1,...\ ,x^n)$,\
+即\
+$Q-O=x^1\delta_1+\cdots+x^n\delta_n$.\
+\\
+由第5题知\
+$\sigma$\
+为线性变换，而\
+$\sigma(O)=P,\ \sigma(\delta_i)=e_i$,\
+\\
+$\therefore\ \sigma(Q)-\sigma(O)=\sigma(Q-O)=\sigma(x^1\delta_1+\cdots+x^n\delta_n)=x^1\sigma(\delta_1)+\cdots+x^n\sigma(\delta_n)=x^1 e_1+\cdots+x^n e_n$\
+即点\ $Q'$\ 关于\
+$\left\{
+P;e_i
+\right\}$\
+的坐标等于点\ $Q$\ 关于\
+$\left\{
+O;\delta_i
+\right\}$\ 的坐标.
+\\
+\\
+\\
+\noindent
+{\textbf{1.7\ 证:}}设\ $\left\lbrace O,\delta_i \right\rbrace $\ 为\ $E_n$\ 中某一直角坐标系，\ $f$\ 在\ $\left\lbrace O,\delta_i \right\rbrace $\ 之下表示成
+\begin{align*}
+\overrightarrow{Of(t)}&=\sum_{i=1}^{n}x^i(t)\delta_i,\ \forall\ t\in \mathbb{R}
+\\
+                      &=(\delta_1,...,\delta_n)  \left( \begin{array}{c}
+                                                             x^1(t)
+                                                              \\
+                                                              \colon
+                                                              \\
+                                                              x^n(t)                                          
+                                                        \end{array}  \right)
+\end{align*}
+任取另一直角坐标系\ $\left\lbrace P,e_i \right\rbrace $\ 则有唯一表示：
+$$\overrightarrow{OP}=\sum_{i=1}^{n}a^i\delta_i=(\delta_1,...,\delta_n)
+                                                      \left(        \begin{array}{c}
+                                                                    a^1(t)
+                                                                    \\
+                                                                    \colon
+                                                                    \\
+                                                                    a^n(t)   
+                                                                    \end{array}  \right)
+ \qquad
+ e_i=\sum_{i=1}^{n}a^i\delta_i=(\delta_1,...,\delta_n)  \left( \begin{array}{c}
+                                                                  a^1_i
+                                                                  \\
+                                                                  \colon
+                                                                  \\
+                                                                  a^n_i
+                                                               \end{array}  \right)
+                                                               \quad (i=1,2,...n)                                           
+$$
+从而
+$$
+(e_1,...e_n)=(\delta_1,...\delta_n) \left( \begin{array}{ccc}
+                                           a^1_1  &  \cdots  &  a^1_n
+                                           \\ 
+                                           \colon &          &  \colon
+                                           \\
+                                           a^n_1  &  \cdots  &  a^n_n
+                                           \end{array} \right)
+$$
+记\ $(a_j^i)=A.$\ 由\ $(e_1,...e_n)$\ 与\ $(\delta_1,...,\delta_n)$\ 均为正交向量组知\  $|A|\neq 0.
+\\
+\therefore A$\ 可逆。记\ $A^{-1}=(b_j^i)_{n\times n}\ \therefore (\delta_1,...,\delta_n)=(e_1,...e_n)A^{-1}$
+$$\overrightarrow{Of(t)}=(\delta_1,...,\delta_n)
+                                           \left(        \begin{array}{c}
+                                          x^1(t)
+                                          \\
+                                          \colon
+                                          \\
+                                          x^n(t)   
+                                          \end{array}  \right)
+                               =(e_1,...e_n)A^{-1} 
+                                          \left(        \begin{array}{c}
+                                          x^1(t)
+                                          \\
+                                          \colon
+                                          \\
+                                          x^n(t)   
+                                          \end{array}  \right)
+      $$
+                    \\
+                    $$
+                      \overrightarrow{OP}=(\delta_1,...,\delta_n)
+                                                              \left(        
+                                                              \begin{array}{c}
+                                                                 a^1(t)
+                                                              \\
+                                                              \colon
+                                                              \\
+                                                              a^n(t)   
+                                                              \end{array}  
+                                                              \right)
+                                        =(e_1,...e_n)A^{-1}
+                                                          \left(        
+                                                         \begin{array}{c}
+                                                         a^1(t)
+                                                         \\
+                                                         \colon
+                                                         \\
+                                                         a^n(t)   
+                                                         \end{array}  
+                                                         \right)   
+$$
+而\ $\overrightarrow{Of(t)}=\overrightarrow{OP}+\overrightarrow{Pf(t)}$\ 从而
+\begin{align*}
+\overrightarrow{Pf(t)}&=\overrightarrow{Of(t)}-\overrightarrow{OP}
+                      \\
+                      &= (e_1,...e_n)A^{-1} 
+                                           \left( 
+                                            \begin{array}{c}
+                                           x^1(t)
+                                           \\
+                                           \colon
+                                           \\
+                                           x^n(t)   
+                                           \end{array}  
+                                           \right)       
+                                                                  -
+                                                                       (e_1,...e_n)A^{-1}
+                                                                                         \left( 
+                                                                                         \begin{array}{c}
+                                                                                         a^1(t)
+                                                                                         \\
+                                                                                         \colon
+                                                                                         \\
+                                                                                         a^n(t)   
+                                                                                         \end{array}  
+                                                                                         \right)              
+                      \\
+                      &=(e_1,...e_n)A^{-1}
+                                           \left(  
+                                           \begin{array}{c}
+                                           x^1(t)- a^1(t)
+                                           \\
+                                           \colon
+                                           \\
+                                           x^n(t)-a^n(t)   
+                                           \end{array}  
+                                           \right)  
+                      \\
+                      &\overset{\bigtriangleup}{=}\sum_{k=1}^{n}e_ky^k(t) \qquad\text{其中}\ y^k(t)=\sum_{j=1}^{n}b_j^k( x^j(t)-a^j(t) )  \quad (k=1,2,...,n)  
+\end{align*}
+由\ $x^j(t)$\ 连续（或r次连续可微）可得\ $y^k(t)$\ 连续（或r次连续可微），从而映射\ $f:\mathbb{R}\rightarrow E^n$\ 的连续性和r次连续可微性与\ $E^n$\ 中直角坐标系的选取无关。 
+	
+
+
+\noindent
+\\
+{\textbf{1.8\ 证:}}	
+	记\ $f(t)$\ 在\ $\left\lbrace O;\delta_i \right\rbrace $\ 与\ $\left\lbrace P;e_i \right\rbrace $\ 下的坐标为\ $(x^1(t),...,x^n(t)),(y^1(t),...,y^n(t)),$\ 其中
+	\\
+	$$\overrightarrow{OP}=\sum_{i=1}^{n}a_i\delta_i,\qquad e_i=\sum_{j=1}^{n}a_i^j\delta_j\quad(i=1,...n)$$
+	\\
+	由的（1.14）
+	$$x^i(t)=a^i+\sum_{j=1}^{n}y^j(t)a^i_j$$
+	则等式两边同时对t求导有
+	$$\frac{dx^i}{dt}(t_0)=\sum_{j=1}^{n}\frac{dy^j(t)}{dt}a_j^i$$
+	又由（2.6）
+	\begin{align*}
+	f'(t_0)&=\sum_{i=1}^{n}\frac{dx^i}{dt}(t_0)\delta_i
+           \\
+	       &=\sum_{i=1}^{n}\sum_{j=1}^{n}\frac{dy^j}{dt}a_j^i\delta_i
+	       \\
+	       &=\sum_{j=1}^{n}\left(\frac{y^j(t)}{dt}\sum_{i=1}^{n}a^i_j\delta_i\right)
+	       \\
+	       &=\sum_{j=1}^{n}\frac{dy^j}{dt}e_j
+	\end{align*}
+	从而可见其形式不变，即切向量定义式（2.6）与直角坐标系的选取无关。
+\noindent
+\\
+\\
+{\textbf{1.9\ 证:}}
+	\begin{itemize}
+		\item [(1)]
+		\begin{align*}
+		D_v(g+\lambda h)&=\left\langle \triangledown (g+\lambda h)(P),v\right\rangle 
+		              \\
+		                &=\left\langle \triangledown g(P)+\lambda \triangledown h(P),V\right\rangle 
+		                \\
+		                &=\left\langle \triangledown g(P),v \right\rangle +\lambda \left\langle \triangledown h(P),v \right\rangle
+		                \\
+		                &=D_v(g)+\lambda D_v(h)
+		\end{align*}
+		\item [(2)]
+		\begin{align*}
+		D_v(g\cdot h)&=\left\langle \triangledown (gh)(P),v \right\rangle 
+		             \\
+		             &=\left\langle ((\triangledown g)h)(P),v \right\rangle +\left\langle (g(\triangledown h))(P),v \right\rangle
+		             \\
+		             &=h(P)\left\langle \triangledown g(P),v \right\rangle +g(P)\left\langle \triangledown h(P),v \right\rangle
+		             \\
+		             &=h(P)D_v g+g(P)D_vh
+		\end{align*}
+	\end{itemize}
+
+
+
+\noindent
+\\
+\\
+{\textbf{1.10\ 证:}}
+	$E_n\rightarrow R$\ 上的函数\ $x^i:P=\lambda^1\delta_1+...+\lambda^n\delta_n\rightarrow \lambda^i\quad(i=1,2,...,n)$
+	\\
+	$\forall\ P=(\lambda^1,...,\lambda^n)\in E^n,$\ 在\ $P$\ 的邻域内取\ $Q=P+\triangle P=(\lambda^1+\triangle\lambda^1,...,\lambda^n+\triangle\lambda^n)$,\ 则
+	$$
+	\lim\limits_{\triangle\lambda^j\to 0}\frac{x^i(Q)-x^i(P)}{\triangle \lambda^j}=\lim\limits_{\triangle\lambda^j\to 0}\frac{\triangle \lambda^i}{\triangle \lambda^j}=\delta_i^j\in C^{\infty}
+	$$ 
+	从而\ $x^i\in C^\infty\quad (\forall\  i=1,2,...,n).$
+	
+\noindent
+\\
+\\
+{\textbf{1.11\ 证:}} 
+\begin{itemize}
+\item [(1)]
+在\ $E^m$\ 中，取两新旧直角坐标分别为\ $\{O;\delta_i\},\{P;e_i\},$\ 且满足\ 
+$$
+\left\{
+\begin{array}{c}
+       \overrightarrow{OP}=\sum_{i=1}^{m}a^i\delta_i
+       \\
+       e_j=\sum_{i=1}^{m}a_j^i\delta_i
+\end{array}
+\qquad j=1,..,m.\right.
+$$
+ 在\ $E^n$\ 中，取两新旧直角坐标分别为\ $\{O;\xi_i\},\{P;\eta_i\},$\ 且满足\ 
+$$
+\left\{
+\begin{array}{c}
+\overrightarrow{OQ}=\sum_{i=1}^{m}b^i\xi_i
+\\
+\eta_j=\sum_{i=1}^{m}b_j^i\xi_i
+\end{array}
+\qquad j=1,..,m.\right.
+$$
+记原映射为\ $F(\lambda^1,..,\lambda^m)=(f^1(\lambda^1,..,\lambda^m),...,f^n(\lambda^1,..,\lambda^m)).$
+\\
+设在新坐标下表示为\ $G(\mu^1,...,\mu^m)=(g^1(\mu^1,..,\mu^m),...,g^n(\mu^1,..,\mu^m))$.
+\\
+则有\ $f^l=b^l+\sum_{j=1}^{n}b^l_jg^j\quad \lambda^k=a^k+\sum_{j=1}^{m}a^k_j\mu^j\ (k=1,..,m).$\ 再记\ $(a^k_j)_{m\times m}$\ 的逆为\ $(C_k^j)_{m\times m}$
+\begin{align*}
+\therefore \frac{\partial f^l}{\partial \lambda^k}
+    =&\sum_{j=1}^{n}b^l_j\frac{\partial g^j}{\partial\lambda^k}
+    \\
+    =&\sum_{j=1}^{n}b_j^l(\sum_{i=1}^m\frac{\partial g^j}{\partial \mu^i}C_k^i)
+    \\
+    =&\sum_{j=1}^{n}sum_{i=1}^mb_j^lfrac{\partial g^j}{\partial \mu^i}C_k^i
+\end{align*}
+$$\therefore (\frac{\partial f^l}{\partial \lambda^k})_{m\times n}=A^{-1}(\frac{\partial g^j}{\partial \mu^i})_{m\times n}B$$
+\\
+记\ $J_f,J_g$\ 分别为\ $F(\lambda^1,..,\lambda^m)$\ 与\ $G(\mu^1,..,\mu^m)$\ 的Jacobi矩阵。则有\ $J_f=A^{-1}J_gB$.
+\item [(2)]
+ 由于A、B可逆，所以\ $A^{-1},B$\ 均可表为若干初等行、列变换的乘积，
+ \\
+  $\therefore r(J_f)=r(J_g)$,\ 在任意点\ $x_0.$
+\item [(3)]
+	在\ $E^m$\ 中任取点P，记\ $Q=f(P)$.
+	\\
+	在\ $P$\ 点邻域分别取两新旧曲纹坐标系\ $(u^1,...,u^m),(v^1,...,v^m)$.\
+	两者之间由同胚映射\ $g$\ 关联：\ $v^i=g^i(u^1,...,u^m)\quad i=1,..,m. \qquad $ 记\ $g^{-1}=\bar{g}$\ 则\ $u^i=\bar{g}^i(v^1,..,v^m)\quad i=1,..,m.$
+	\\
+	同样在\ $Q$\ 点邻域分别取两新旧曲纹坐标系\ $(s^1,...,s^n),(t^1,...,t^n)$.\
+	两者之间由同胚映射\ $h$\ 关联：\ $t^i=h^i(s^1,...,s^n)\quad i=1,..,m$
+	\\
+	原函数\ $f(u^1,..,u^m)$\ 中分量记为\ $f^i(u^1,..,u^m)\ (i=1,..,n)$\ 在\ $E^m$\ 与\ $E^n$\ 间曲纹坐标变换下为\ $\tilde{f}(v^1,..,v^m)$,\ 其在新坐标下分量为:	$\tilde{f}^i(v^1,..,v^m)=h^i(f^1,..,f^n)\quad $其中\ $f^j(u^1,..,u^m)=f^j(\bar{g}(v^1,..,v^m),...,\bar{g}(v^1,..,v^m))\ (i=1,..,n;j=1,..,n)$
+	\\
+	从而在变换后Jacobi矩阵\ $J_{n\times m}$\ 为
+	\begin{align*}
+	J_j^i&=\frac{\partial\tilde{f}^i}{\partial v^j}
+	\\
+	     &=\frac{\partial h^i}{\partial f^k}\frac{\partial f^k}{\partial u^r}\frac{\partial \bar{g}^r}{\partial v^j}\quad(i,k=1,..,n,r,j=1,..,m)
+	\end{align*}
+	在\ P\ 点，记\ $g$\ 的雅克比矩阵\ $(\frac{\partial g^i}{\partial u^j})_{m\times m}$\ 为\ G,\ $h$\ 的雅克比矩阵\ $(\frac{\partial h^i}{\partial v^j})_{n\times n}$\ 为\ H,\ 变换前\ $f$\ 的雅克比矩阵\ $(\frac{\partial f^i}{\partial u^j})_{n\times m}$\ 为\ $J_0$\ 则有：
+	$$J=HJ_0G^{-1}$$
+\end{itemize}
+
+\noindent
+\\
+\\
+{\textbf{1.12\ 证:}} 记原方程组为$x^i=f^i(u^1,..,u^n),\ i=1,..,n.$\ 则\ $f=f^i\delta_i$\ 的雅克比矩阵的行列式为
+\begin{align*}
+     \left| \frac{\partial(f^1,..,f^n)}{\partial(u^1,..,u^n)} \right|
+      &=\left|
+          \begin{array}{ccccccc}
+          -x^1tanu^1      &-x^1tanu^2      &\cdots   &-x^1tanu^{n-2}  &-x^1tanu^{n-1} &\frac{x^1}{u^n}
+          \\
+          -x^2tanu^1      &-x^2tanu^2      &\cdots   &-x^2tanu^{n-2}  &x^2cotu^{n-1}  &\frac{x^2}{u^n}
+          \\
+          \colon          &\colon      	   &\colon   &\colon          &\colon         &\colon
+          \\
+          -x^{n-1}tanu^1  &x^{n-1}cotu^2   &\cdots   &  0             &0              &\frac{x^{n-1}}{u^n}
+          \\
+          x^{n}cotu^1     &0               &\cdots   &  0             &0              &\frac{x^{n}}{u^n}
+          \end{array}
+     \right|
+     \\
+     &=x^1x^2\cdots x^n
+       \left|
+        \begin{array}{cccccccc}
+        -tanu^1 &-tanu^2 &\cdots &-tanu^{n-2} &-tanu^{n-1} &1
+        \\
+        -tanu^1 &-tanu^2 &\cdots &-tanu^{n-2} &cotu^{n-1}  &1
+        \\
+        -tanu^1 &-tanu^2 &\cdots &cotu^{n-2}  &0           &1
+        \\
+        \colon  &\colon  &\colon &\colon      &\colon      &\colon
+        \\
+        -tanu^1 &\cot u^2&\cdots &0           &0           &1
+        \\
+        \cot u^1&0       &\cdots &0           &0           &1
+        \end{array}
+       \right|
+    \\
+    &=\frac{x^1 x^2 \cdots x^n}{u^n} \cdot \left[ (-1)^{1+n}  (-1)^{\frac{(n-1)(n-2)}2{}} cotu^1 \cdots cotu^{n-1}\right.
+    \\&\left.\qquad\qquad\qquad\qquad+(-1)^{2+n} (-1)^{\frac{(n-1)(n-2)}{2}} cotu^1 \cdots cotu^{n-2}(-tanu^{n-1})\right]
+    \\
+    &=(-1)^{\frac{n^2-n+4}{2}} \left(\prod_{i=1}^{n-2} r^i \prod_{j=1}^{i}cosu^j\right) x^1x^2(u^n)^{n-3}\frac{1}{sinu^{n-1}cosu^{n-1}}
+\end{align*}
+当\ $x^1,x^2\neq 0$\ 时，有\ $u^n,cosu^1,\cdots,cosu^{n-1},sinu^{n-1}$\ 非零，又由\ $r^1,\cdots r^n$\ 为正数可知：$\left| \frac{\partial(f^1,..,f^n)}{\partial(u^1,..,u^n)} \right|\neq 0$,\ 即\ f\ 的秩为\ n\ .\ 从而\ $(u^1,\cdots u^n)$\ 给出\ $E^n$\ 中除坐标面\ $\left\lbrace  (0,0,x^3,\cdots,x^n):x^3,\cdots,x^n\in\ \mathbb{R} \right\rbrace $\ 以外的任意一点的邻域内的曲纹坐标系。
+
+
+
+\noindent
+\\
+\\
+{\textbf{1.13\ 解:}} 设\ $(x,y,z)$ 是\ $E^3$ \ 中的直角坐标系,令
+$$
+\left\lbrace 
+           \begin{array}{l}
+           x=\rho \cos\psi\cos \theta
+           \\
+           y=\rho \cos\psi\sin \theta
+           \\
+           z=\rho \sin\psi
+           \end{array}
+\right. \quad(0<\rho <+\infty,-\frac{\pi}{2}<\psi<\frac{\pi}{2},-\pi<\theta<\pi )
+$$
+则\ $(\rho,\psi,\theta)$\ 给出球坐标系，记\ $u^1=\rho ,u^2=\psi ,u^3=\theta $\ 则可求其自然标架场如下：
+\begin{align*}
+\overrightarrow{r_1}&=(cos\psi cos\theta ,cos \psi sin \theta ,sin\psi )
+\\
+\overrightarrow{r_2}&=(-\rho sin \psi cos\theta ,-\rho sin\psi sin\theta ,\rho cos\psi )
+\\
+\overrightarrow{r_3}&=(-\rho cos\psi sin\theta ,\rho cos\psi cos\theta ,0)
+\end{align*}
+则\ $\forall \ Q=r(P),\{Q,r_i\}$\ 为\ $E^3$\ 中球坐标系诱导的自然标架场。
+\\
+下求其度量系数：
+\begin{align*}
+&g_{11}=\langle \overrightarrow{r_1},\overrightarrow{r_1} \rangle=1  & g_{12}=g_{21}=\langle \overrightarrow{r_1},\overrightarrow{r_2} \rangle =0     
+\\
+&g_{31}=g_{13}=\langle \overrightarrow{r_1},\overrightarrow{r_3} \rangle=0 
+\\
+&g_{22}=\langle \overrightarrow{r_2},\overrightarrow{r_2} \rangle=\rho ^2  & g_{23}=g_{32}=\langle \overrightarrow{r_2},\overrightarrow{r_3} \rangle =0     
+\\
+&g_{33}=\langle \overrightarrow{r_3},\overrightarrow{r_3} \rangle=\rho ^2cos^2\psi  
+\end{align*}
+$\therefore$\ 度量系数为\ $g_{11}=\rho^2,\ g_{33}=\rho^2cos^2\psi, \ g_{ij}=0\ (i\neq j\text{\ 时,其中}\ i,j=1,2,3).$
+\\
+则\ $g^{11}=1,\ g^{22}=\frac{1}{\rho^2},\ g^{33}=\frac{1}{\rho^2cos^2\psi },\  g^{ij}=0\ (i\neq j\text{\ 时,其中}\ i,j=1,2,3)$.
+\\
+且\ $\frac{\partial g_{11}}{\partial u^i}=0\ (i=1,2,3)\quad \frac{\partial g_ij}{\partial u^k}\ (i,j,k=1,2.3)\quad \frac{\partial g_{22}}{\partial u^1}=2\rho \quad \frac{\partial g_{22}}{\partial u^2}=0 \quad\frac{\partial g_{22}}{\partial u^3}=0 \quad\frac{\partial g_{33}}{\partial u^1}=2\rho cos^2\psi  \quad \frac{\partial g_{33}}{\partial u^2}=-\rho^2 sin2\psi  \quad\frac{\partial g_{33}}{\partial u^3}=0$
+\\
+从而由\ 
+$$
+\varGamma^k_{il}=\frac{1}{2}g^{kj}(\frac{\partial g_{ij}}{\partial u^l}+\frac{\partial g_{jl}}{\partial u^i}-\frac{\partial g_{il}}{\partial u^j})
+$$
+得：
+\begin{align*}
+\varGamma^1_{33}&=\frac{1}{2}g^{11}(\frac{\partial g_{31}}{\partial u^3}+\frac{\partial g_{13}}{\partial u^1}-\frac{\partial g_{33}}{\partial u^1})=\rho cos^2\psi
+\\
+\varGamma^2_{33}&=\frac{1}{2}g^{22}(\frac{\partial g_{32}}{\partial u^3}+\frac{\partial g_{32}}{\partial u^1}-\frac{\partial g_{33}}{\partial u^2})=-sins\psi 
+\\
+\varGamma^3_{33}&=\frac{1}{2}g^{33}(\frac{\partial g_{33}}{\partial u^3}+\frac{\partial g_{33}}{\partial u^3}-\frac{\partial g_{33}}{\partial u^3})=0
+\end{align*}
+又由
+\begin{align*}
+ \frac{\partial \overrightarrow{r_1}}{\partial u^1}=0\qquad \qquad \qquad  &\frac{\partial \overrightarrow{r_1}}{\partial u^2}=\frac{1}{\rho}\overrightarrow{r_2}  &\frac{\partial \overrightarrow{r_1}}{\partial u^3}=\frac{1}{\rho}\overrightarrow{r_3}
+\\
+     &\frac{\partial \overrightarrow{r_2}}{\partial u^2}=-\rho \overrightarrow{r_1} &\frac{\partial \overrightarrow{r_2}}{\partial u^3}=-tan\psi  \overrightarrow{r_3}
+\end{align*}
+从而\ Christoffel\ 系数为：
+\begin{align*}
+&\varGamma^2_{12}=\varGamma^2_{21}=\frac{1}{rho} &\varGamma^3_{31}=\varGamma^3_{13}=\frac{1}{rho}
+\\
+&\varGamma^1_{22}=-rho &\varGamma^3_{23}=\varGamma^3_{32}=-tan\psi 
+\\
+&\varGamma^1_{33}=-\rho cos^2\psi  &\varGamma^2_{33}=-sin^2\psi 
+\end{align*}
+其余为\ 0.
+
+\noindent
+\\
+\\
+{\textbf{1.14\ 解:}}
+设\ (x,y,z)\ 为\ $E^3$\ 中直角坐标系，设
+\begin{displaymath}
+\left\lbrace  
+\begin{array}{l}
+	x=\rho cos \theta
+	\\
+	y=\rho sin \theta
+	\\
+	z=t
+\end{array}
+\right.
+     \quad(\text{其中}\ 0<r<+\infty ,\ -\pi <\theta <\pi ,\ -\infty <t<+\infty )
+\end{displaymath}
+则\ $(\rho ,\theta ,t)$\ 为柱坐标系。记\ $u^1=\rho ,\ u^2=\theta,\ u^3=t$,\ 则有：
+\begin{align*}
+&\overrightarrow{r_1}=(cos\theta ,sin\theta ,0)
+\\
+&\overrightarrow{r_2}=(-\rho sin\theta ,\rho cos\theta ,0)
+\\
+&\overrightarrow{r_3}=(0,0,1)
+\end{align*}
+且\ $g_{11}=1,\ g_{22}=\rho^2,\ g_{33}=1,\ g_{ij}=0\,(i\neq j\text{时})$
+由于：
+\begin{displaymath}
+\begin{array}{ccc}
+	\frac{\partial \overrightarrow{r_1}}{\partial u^1}=0  & 
+	\frac{\partial \overrightarrow{r_1}}{\partial u^2}=\frac{1}{\rho}\overrightarrow{r_2}  &
+	\frac{\partial \overrightarrow{r_1}}{\partial u^3}=0
+	\\
+	 &
+	\frac{\partial \overrightarrow{r_2}}{\partial u^2}=-\rho \overrightarrow{r_1} &
+	\frac{\partial \overrightarrow{r_2}}{\partial u^3}=0
+	\\
+	 &
+	 &
+	\frac{\partial \overrightarrow{r_3}}{\partial u^3}=0
+\end{array}
+\end{displaymath}
+所以\ Christoffel\ 系数为：
+$$\varGamma^2_{12}=\varGamma^2_{21}=\frac{1}{\rho}\quad\varGamma^1_{22}=-\rho $$
+其余为0
+
+
+\noindent
+\\
+\\
+{\textbf{1.15\ 证:}}
+$\because\ v=v^i\overrightarrow{e_i}$
+\begin{align*}
+\therefore\ dv&=v^jd\overrightarrow{e_j}+\overrightarrow{e_i}dv^i
+              \\
+              &=v^j(\frac{\partial \overrightarrow{e_j}}{\partial u^k}du^k)+\overrightarrow{e_i}dv^i
+              \\
+              &=v^j\varGamma^i_{jk}\overrightarrow{e_i}du^k+\overrightarrow{e_i}dv^i
+              \\
+              &=(v^j\varGamma^i_{jk}du^k+dv^i)\overrightarrow{e_i}
+\end{align*}
+$\therefore\ v\text{为平行向量场}\Leftrightarrow v^j\varGamma^i_{jk}+dv^i=0(\forall\ i=1,2,...,n)$
+
+\noindent
+\\
+\\
+{\textbf{1.16\ 证:}}
+定义加法\ $'+':(f+g)(x)=f(x)+g(x)$,\ 数乘:\ $(\lambda f)(x)=\lambda f(x) $
+\\
+先证\ $(\mathscr{L}(v_1,\cdots,v_r;\mathbb{R}),+)$\ 构成加法群。
+\begin{itemize}
+	\item [(1)] $\forall\ f,g\in \mathscr{L}(v_1,\cdots ,v_r;\mathbb{R})\quad \forall\ i\in \{1,\cdots ,r\}\quad\forall \ x_1=(x^1,\cdots,x_1^i,\cdots,  x^r),x_2=(x^1,\cdots ,x_2^i,\cdots, x^r)\in V_1\times \cdots \times V_r\quad \forall \ k_1,k_2\in \mathbb{R}$\ 有
+	\begin{align*}
+	 &(f+g)(x^1,\cdots ,k_1x^i_1+k_2x^i_2,\cdots x^r)
+	 \\
+	=&f(x^1,\cdots ,k_1x^i_1+k_2x^i_2,\cdots x^r)+g(x^1,\cdots ,k_1x^i_1+k_2x^i_2,\cdots x^r)
+	\\
+	=&(k_1f(x_1)+k_2f(x_2))+(k_1g(x_1)+k_2g(x_2))
+	\\
+	=&k_1(f+g)(x_1)+k_2(f+g)(x_2)
+	\end{align*}
+	$\therefore f+g\in \mathscr{L}(V_1,\cdots,V_r;\mathbb{R})$
+	\item [(2)] $\forall\ f,g,h\in \mathscr{L}(V_1,\cdots,V_r;\mathbb{R})\quad \forall\ x\in V_1\times ,\cdots ,V_r$,\ 有
+	$$[(f+g)+h](x)=(f+g)(x)+h(x)=f(x)+g(x)+h(x)$$
+	$$[f+(g+h)](x)=f(x)+(g+h)(x)=f(x)+g(x)+h(x)$$
+	$\therefore (f+g)+h=f+(g+h)$
+	\item[(3)] 取\ $\theta $\ 为\ $\forall\ x\in V_1\times\cdots \times V_r,\theta (x)=0$
+	\\
+	则显然\ $f+\theta =\theta +f,\forall\ f$
+	\item [(4)] $\forall\ f,$\ 取\ $-f$\ 为\ $(-f)(x)=-f(x)$\ 则\ $f+(-f)=(-f)+f=\theta$
+	\item [(5)] $\forall\ f,g\in\mathscr{L}(V_1\cdots V_r;\mathbb{R})$\ 显然\ $f+g=g+f.$
+\end{itemize}
+所以\ $(\mathscr{L}(v_1,\cdots,v_r;\mathbb{R}),+)$\ 构成Abel群。
+$\forall\ \lambda,\mu\in \mathbb{R}\quad \forall f,g\in \mathscr{L}(V_1\times \cdots \times V_r;\mathbb{R})$,\ 又有
+\begin{itemize}
+	\item [(6)] $(\lambda,\mu)f=\lambda f+\mu f$
+	\item [(7)] $(\lambda \mu )g=\lambda (\mu g)$
+	\item [(8)] $\lambda (f+g)=\lambda f+\lambda g$
+	\item [(9)] $1\cdot f=f$
+\end{itemize}
+所以\ $\mathscr{L}(V_1,\cdots ,V_r;\mathbb{R})$\ 构成\ $\mathbb{R}$\ 上的线性空间。
+
+
+\noindent
+\\
+\\
+{\textbf{1.17\ 证:}}
+\begin{itemize}
+	\item [(1)]
+	$\forall\ k_1,k_2\in \mathbb{R}\ u_1,u_2\in V,$\ 则由\ $\tilde{f}$\ 为2重线性函数知
+	\begin{align*}
+	f(k_1u_1+k_2u_2)=&\sum_{i=1}^{n}\tilde{f}(k_1u_1+k_2u_2,\delta^i)\delta_i
+	                \\
+	                =&\sum_{i=1}^{n}(k_1\tilde{f}(u_1,\delta^i)+k_2\tilde{f}(u_2,\delta^i))\delta_i
+	                \\
+	                =&k_1\sum_{i=1}^{n}\tilde{f}(u_1,\delta^i)\delta_i+k_2\sum_{i=1}^{n}\tilde{f}(u_2,\delta^i)\delta_i
+	                \\
+	                =&k_1f(u_1)+k_2f(u_2)
+	\end{align*}
+	所以\ $f$\ 为线性变换。
+	\item [(2)]
+	若另取基底\ $\{e^i\}$,\ 且\ $e^i=a^i_j\delta_j$\, 其对偶基底\ $\{e_i\}$,\ 则有\ $\delta_j=a^i_je_i$ ,\ 其中\ $(b^j_i)$\ 为\ $(a_i^j)$\ 的逆矩阵。且由
+	\begin{align*}
+	\delta^i(e_j)=\delta_i(a^k_j\delta_k)=a^k_j\delta_k^i=a^i_j=a_k^ie^k(e_j)
+	\end{align*} 
+	知\ $\delta^i=a^i_ke^k.$
+	\\
+	$\therefore f(u)=\tilde{f}(u,\delta^i)\delta_i=\tilde{f}(u,a^i_ke^k)(b^j_ie_j)=a^i_kb^j_i\tilde{f}(u,e^k)e_j=\delta_k^j\tilde{f}(u,e^k)e_j=\tilde{f}(u,e^j)e_j$
+	\\
+	$\therefore\ f$\ 的定义与基底的选取无关。
+\end{itemize}
+
+
+\noindent
+\\
+{\textbf{1.18\ 证:}}
+取定\ $t,\forall \ v=(v_1,\cdots v_r) \in V\times \cdots \times V\quad v^1\in V^\star$,\ 取\ $F:V^\star \times V_1\cdots \times V_r \to \mathbb{R}$\ 为\ $F(v^1,v_1,\cdots\ v_r)=v^1(t(v))$\ ，显然\ $F$\ 是\ $V^\star\times V \times \cdots V$\ 上的一个\ $1+r$\ 重线性函数，即\ $(1,r)$\ 型张量。 
+\\
+反之，若给定一个\ $(1,r)$\ 型张量\ $F:V^\star\times V_1\times \cdots V_r,\ \forall \ v=(v1,\cdots, v_r)\in V\times \cdots \times \to \mathbb{R}  $,\ 令\ $t(v)=F(\delta^i,v_1,\cdots ,v_r)\delta_i$,\ 显然\ $t$\ 为\ $r$\ 重线性映射。
+\\
+所以\ $t$\ 等同一个\ $(1,r)$\ 型张量。
+
+
+
+
+\noindent
+\\
+\\
+{\textbf{1.19\ 证:}}
+\begin{itemize}
+	\item [(1)]
+	$\forall \ \alpha_1,\cdots ,\alpha_2\in \mathscr{L}(V_1,\cdots ,V_p;\mathbb{R}),\quad \forall \ \beta \in \mathscr{L}(W_1,\cdots ,W_q;\mathbb{R}) $
+	\\
+	$  \forall \ v\in V_1\times \cdots \times V_p,\quad w\in W_1\times \cdots \times W_q$ 
+	\begin{align*}
+	  &(\alpha_1+\alpha_2)\otimes\beta (v,w)
+	\\
+	=&(\alpha_1+\alpha_2)(v)\cdot \beta (w)
+	\\
+	=&[\alpha(_1(v)+\alpha_2(v)]\cdot \beta(w)
+	\\
+	=&\alpha_1(v)\cdot \beta(w)+\alpha_2(v)\cdot \beta(w)
+	\\
+	=&\alpha_1\otimes \beta (v,w)+\alpha_2 \otimes \beta (v,w)
+	\\
+	=&(\alpha_1\otimes\beta +\alpha_2\otimes\beta )(v,w)
+	\end{align*}
+	$\therefore \ (\alpha_1+\alpha_2)\otimes \beta =\alpha_1\otimes \beta +\alpha_2\otimes \beta $
+	同理\ $\beta\otimes(\alpha_1+\alpha_2)=\beta \otimes \alpha_1+\beta \otimes \alpha_2$
+	\item [(2)]
+	$\forall \ \alpha \in \mathscr{L}(V_1,...,Vr;\mathbb{R}),\ \beta \in \mathscr{L}(W_1,...,W_s;\mathbb{R}),\ \gamma \in \mathscr{L}(Z_1,...,Z_t;\mathbb{R})$
+	\\
+	$\forall \ V_1\times \cdots \times V_r,\ w\in W_1\times \cdots \times W_s,\ z\in Z_1\times \cdots \times Z_t$,\ 则
+	\begin{align*}
+	 &(\alpha \otimes \beta )\otimes\gamma (v,w,z)
+	\\
+	=&(\alpha \otimes \beta )(v,w)\cdot \gamma (z)
+	\\
+	=&(\alpha(v)\cdot \beta (w))\cdot \gamma(z)
+	\\
+	=&\alpha(v)\cdot [\beta(w)\gamma(z)]
+	\\
+	=&\alpha(v)\cdot [(\beta \otimes \gamma(w,z))]
+	\\
+	=&[\alpha\otimes(\beta\otimes\gamma)](v,w,z)
+	\end{align*}
+	$\therefore (\alpha\otimes\beta)\otimes\gamma=\alpha\otimes(\beta\otimes\gamma)$
+	\\
+	故多重线性函数的张量积服从分配率和结合律。
+\end{itemize}
+
+
+
+
+
+\noindent
+\\
+\\
+{\textbf{1.20\ 证:}}
+设\ $\{\xi_i\}$\ 为\ $V$\ 的基，\ $\{\eta_i\}$\ 为\ $W$\ 的基，记\ $A=\{V\otimes W|v\in V,w\in W \}$,\ 下证\ $A$\ 不构成线性空间：
+\\
+由于\ $dim(V)\geqslant 2,dim(W)\geqslant 2$.\ 所以分别可取\ $V,W$\ 的两组基：\ $\xi_1,\xi_2,\eta_1,\eta_2$,则
+$$\xi_1\otimes \eta_1\in A,\ \xi_2\otimes\eta_2\in A,$$
+若$$\xi_1\otimes\eta_1+\xi_2\otimes\eta_2\in A$$
+则\ $\exists\  a^i\ (i=1,2,...,n)\ s.t.\ $
+$$\xi_1\otimes \eta_1+\xi_2\otimes\eta_2=(a^i\xi_i)\otimes (b^j\eta_j )=a^ib^j\xi_i\otimes\eta_j$$
+移项并合并后，由于\ $\{\xi_i\eta_j\}$\ 线性无关，所以有
+\begin{displaymath}
+a^ib^j=\left\lbrace \begin{array}{lll}
+                      1 & i=j=1\ \text{以及}\ i=j=2\ \text{时};
+                      \\
+                      0 & \text{其余情况}.    
+                     \end{array}
+        \right.
+\end{displaymath}
+$a^1b^1=a^2b^2=1$,\ 从而\ $a^1,b^1,a^2,b^2\neq 0$,\ 但\ $a^1b^2=0$,\ 矛盾！
+\\
+$\therefore \xi_1\otimes\eta_1+\xi_2\otimes\eta_2\notin A$,\ $A$\ 不构成线性空间。
+
+
+\noindent
+\\
+\\
+{\textbf{1.21\ 证:}} 
+
+\begin{itemize}
+	\item [(1)] 
+	由题知\;$f(\delta_i)=b_i^j\delta_i.$
+	\\
+	若另取基底\;$\{e_i\}$\; 且\;$e_i=a_i^j\delta_j$\; 从而\;$\delta_j=c_j^ie_i$\;(其中\;$(c_i^j)$\;为\;$(a_i^j)$\;的逆).
+	\\
+	则\;$f(e_i)=f(a_i^j\delta_j)=a_i^jf(\delta_j)=a_i^jb_j^k\delta_k=a_i^jb_j^kc_k^le_l$.
+	\\
+	即\;$f(e_i)=(a_i^jb_j^kc_k^l)e_l,$\;记\;$d_i^l=a_i^jb_j^kc_k^l.$
+	\\
+	$\therefore f$\;在基\;$\{e_i\}$\;下矩阵是\;$(d_i^l).$
+	\\
+	此时
+	\begin{align*}
+	B_3&=d_i^jd_k^id_j^k
+	\\
+	   &=a_i^s b_s^t c_t^j a_k^e b_e^f c_f^i a_j^g b_g^h c_h^k
+	   \\
+	   &=(a_i^s c_f^i) (a_k^e c_h^k) (a_j^g c_t^j) b_s^t b_e^f b_g^h
+	   \\
+	   &=(\delta_f^s b_e^f) (\delta_h^e b_g^h) (\delta_t^g b_s^t)
+	   \\
+	   &=b_e^s b_g^e b_s^g
+	\end{align*}
+	$\therefore B_3$\; 与基底的选取无关。 
+	\item[(2)]
+	令\;$F:V^{\star}\times V^{\star}\to \mathbb{R}$\;为$\; F(\delta^i,u)=\delta^i(f(u)).\;(\forall u\in V)$.\; 则易证$\;F\;$为\;(1,1)\;型张量，且
+	\begin{align*}
+	B_3&=b_i^j b_k^i b_j^k
+	\\
+	   &=F(\delta^j,\delta_i)\cdot F(\delta^i,\delta_k)\cdot F(\delta^k,\delta_j)
+	   \\
+	   &=F(\delta^j,\delta_i)\cdot [(C_1^2 F\otimes F)(\delta^i,\delta_j)]
+	   \\
+	   &=C_2^1[F\otimes C_1^2(F\otimes F)](\delta^j,\delta_j)
+	   \\
+	   &=C_1^1 \{C_2^1 [F\otimes C_1^2(F\otimes F)]\}.
+	\end{align*}
+\end{itemize}
+\noindent
+\\
+{\textbf{1.22\ 解:}}\;令$\;F:V^{\star}\times V\to \mathbb{R}\quad F(v^i,v_ j)=v^i(v_j).$\,易证$\;F\;$为\;(1,1)\;型张量.\;
+任取$\;V\;$的基底\;$\{\delta_i\}$,\;其对偶基底\;$\{\delta^i\}$,\;则\;$\{\delta_i\otimes \delta^j\}$\;为$\;F\;$的基底,且 \;$\delta^i(\delta_j)=\delta_j^i$.\;从而
+$\; F(\delta^i,\delta_j)=\delta_i^j.$
+$$F=F(\delta^i,\delta_j)\delta_i\otimes\delta^j=\delta_i^j\delta_i\otimes \delta^j=\sum_{i}\delta_i\otimes \delta^i$$
+$\therefore \delta_i^j$\;为$\;F\;$的分量。
+ 
+\noindent
+\\
+\\
+{\textbf{1.23\ 解:}}\;若存在\;(0,2)\;型张量$\;F\;$满足题设条件，则任取$\;V\;$的一组基底$\;\{\delta_i\},\;F(\delta_i,\delta_j)=\delta_{ij}.\;$另任取一基底\;$\{e_i\}$\;，且\;$e_i=a_i^j\delta_j$,\;则
+\begin{align*}
+F(e_i,e_j)=\delta_{ij}\Leftrightarrow & F(a_i^k\delta_k,a_j^r\delta_r)=\delta_{ij}
+\\
+\Leftrightarrow &a_i^k a_j^r F(\delta_k,\delta_r)=\delta_{ij}
+\\
+\Leftrightarrow &a_i^k a_j^k=\delta_{ij} 
+\\
+\Leftrightarrow &(a_i^j)\; \text{为单位正交阵}
+\end{align*}
+但$\;a_i^j\;$未必为单位正交阵，矛盾！
+\\
+所以不存在。
+
+\noindent
+\\
+\\
+{\textbf{1.24\ 证:}}$\;\forall\; v_1,\cdots ,v_q \in V,\; (\sigma(f))(v_1,\cdots ,v_q)=f(v_{\sigma(1)},\cdots ,v_{\sigma(q)})=\alpha^1(v_{\sigma(1)})\cdots \alpha^q (v_{\sigma(q)}).$
+\begin{align*}
+\alpha^{\tau (1)}(v_1)\otimes \cdots \otimes \alpha^{\tau (q)}(v_1,\cdots ,v_q)&=\alpha ^{\tau(1)}\otimes \cdots \otimes \alpha ^{\tau(q)}(v_1,\cdots ,v_q)\;
+\\
+(\text{由}\; \tau =\sigma^{-1}\; \text{知}\; i=\sigma(\tau (i)))\quad     
+&=\alpha^{\tau(1)}(v_{\sigma(\tau (1))})\cdots \alpha^{\tau(q)}(v_{\sigma(\tau (q))})
+\\
+&=\alpha^{1}(v_{\sigma(1)})\cdots \alpha^{q}(v_{\sigma(q)})
+\end{align*}
+$\therefore \sigma(f)=\alpha^{\tau(1)}\otimes\cdots\otimes \alpha^{\tau(q)}$
+
+\noindent
+\\
+\\
+{\textbf{1.25\ 证:}} 
+\begin{itemize}
+	\item [(1)] 
+	   \begin{align*}
+	   \sigma \;\text{是对称张量}\;&\Leftrightarrow \sigma(\xi)=\xi
+	   \\
+	                              &\Leftrightarrow \frac{1}{q!}\sum_{\sigma\in \varphi(q)}\sigma(\xi)=\xi
+	                              \\
+	                              &S_q(\xi) =\xi.                        
+	   \end{align*}
+    \item [(2)]
+       \begin{align*}
+         \sigma \;\text{是反对称张量}\; &\Leftrightarrow \sigma(\xi)=sign(\sigma)\xi
+         \\                             
+                                       &\Leftrightarrow sign(\sigma)\cdot \sigma(\xi)=\xi
+                                       \\
+                                       &\Leftrightarrow \sum_{\sigma\in \varphi(q)}sign(\sigma)\cdot \sigma(\xi)=\xi\cdot q!
+                                       \\
+                                       &\Leftrightarrow A_q(\xi)=\xi
+       \end{align*}
+	   
+\end{itemize}
+
+
+\noindent
+\\
+\\
+{\textbf{1.26\ 证:}} $\forall\; \xi \in V_2^0,\{\delta^i\}\;\text{为}\;V\;\text{中的基,\;}$ 记  $\;\xi=\xi_{ij}\delta^i\delta^j\;$为二阶协变张量.\ 对于$\delta \stackrel{\Delta}{=}\delta^i\otimes \delta^j.$
+\begin{align*}
+S_2(\delta)&=\frac{1}{2}\cdot (\delta^i\otimes\delta^j+\delta^j\otimes\delta^i)\;(\text{由24题})
+\\
+A_2(\delta)&=\frac{1}{2}(\delta^i\otimes\delta^j-\delta^j\otimes\delta^i)
+\\
+\Rightarrow \delta&=\delta^i\otimes\delta^j=S_2(\delta)+A_2(\delta)
+\\
+\therefore \xi=&\xi_{ij}\delta^i\otimes\delta^j
+\\
+&=\delta_{ij}(S_2(\delta^i\otimes\delta^j)+A_2(\delta^i\otimes\delta^j))
+\\
+&=S_2(\xi)+A_2(\xi)
+\end{align*} 
+其中$\;S_2(\xi)\;$为对称张量，$A_2(\xi)\;$为反对称张量。
+
+\noindent
+\\
+\\
+{\textbf{1.27\ 证：}}取$\;V\;$中基底$\;\{\delta_i\},\;$由$\;\varphi\in V_2^0,\;$依题意知$,\;\forall\;\delta_i\delta_j\delta_k\;$有
+\begin{align*}
+\varphi(\delta_i,\delta_j,\delta_k)&=\varphi(\delta_j,\delta_i,\delta_k)
+                                   \\
+                                   &=-\varphi(\delta_j,\delta_k,\delta_i)
+                                   \\
+                                   &=-\varphi(\delta_k,\delta_j,\delta_i)
+                                   \\
+                                   &=\varphi(\delta_k,\delta_i,\delta_j)
+                                   \\
+                                   &=-\varphi(\delta_i,\delta_j,\delta_k)
+         \\
+         \Rightarrow &\varphi(\delta_i,\delta_j,\delta_k)=0.
+         \\
+         \therefore \varphi&=\varphi(\delta_i,\delta_j,\delta_k)\delta^i\otimes\delta^j\otimes\delta^k=0.
+\end{align*}
+
+
+\noindent
+\\
+\\
+{\textbf{1.28\ 证：}}取$\;V\;$的基$\;\{\delta_i\},\;\because a(x,x)=0,\;\therefore a(\delta_i,\delta_j)=0\quad (i=j)\;$时.
+\\
+$\forall i\neq j\;$取$\;x=\delta_i+\delta_j\;$则
+\begin{align*}
+    0 &=a(x,x)
+      \\
+      &=a(\delta_i+\delta_j,\delta_i+\delta_j)
+      \\
+      &=a_{ii}+a_{ij}+a_{ji}+a_{jj}
+      \\
+      &=a_{ij}+a_{ji}.
+\end{align*}
+记$\;a=a_{ij}\delta^i\otimes \delta^j\;$有
+\begin{align*}
+S_2(a)&=\frac{1}{2}a_{ij}(\delta^i\otimes\delta^j+\delta^j\otimes\delta^i)
+    \\
+    &=\frac{1}{2}(a_{ij}\delta^i\otimes\delta^j+a_{ji}\delta^i\otimes \delta^j)
+    \\
+    &=\frac{1}{2}(a_{ij}+a_{ji})\delta^i\otimes\delta^j
+    \\
+    &=0.
+\end{align*}
+
+\noindent
+\\
+\\
+{\textbf{1.29\ 证：}}由于$\;a\;$为任意对称张量，可取$\;a\;$使得$\;a^{ij}\neq 0(\forall\;i,j)\;$(\;例如，取$\;a=\sum_{i}\sum_{j}\delta_i\otimes\delta_j\;$), 则
+$$0=a^{ij}b_{ij}=a^{ji}b_{ji}=a^{ij}b_{ji}$$
+$\therefore a^{ij}(b^{ij}+b^{ji})=0,\;$此时$b_{ij}+b_{ji}=0\Rightarrow b_{ij}=-b{ji},$
+\\
+$\therefore b\;$为反对称张量。
+
+\noindent
+\\
+\\
+{\textbf{1.30\ 证：}}取\ $V$ 的基\ $\{\delta_i\}$ ，由\ $x$ 的任意性， $\forall\; i,j$\ 取\ $x=\delta_i+\delta_j \in V.$\ 由\ $f(x,x)=\tilde{f}(x,x)$\ 知
+\begin{align*}
+f(\delta_i+\delta_j,\delta_i+\delta_j)&=\tilde{f}(\delta_i+\delta_j,\delta_i+\delta_j)
+\\
+\Rightarrow f(\delta_i,\delta_i)+f(\delta_i,\delta_j)+f(\delta_j,\delta_i)+f(\delta_j,\delta_j)&=\tilde{f}(\delta_i,\delta_i)+\tilde{f}(\delta_i,\delta_j)+\tilde{f}(\delta_j,\delta_i)+\tilde{f}(\delta_j,\delta_j)
+\\
+\Rightarrow f(\delta_i,\delta_j)+f(\delta_j,\delta_i)&=\tilde{f}(\delta_i,\delta_j)+\tilde{f}(\delta_j,\delta_i)
+\\
+\Rightarrow 2f(\delta_i,\delta_j)&=2\tilde{f}(\delta_i,\delta_j)
+\\
+\Rightarrow f_{ij}&=\tilde{f}_{ij}
+\end{align*}
+记$\;f=f_{ij}\delta^i\otimes\delta^j \quad  \tilde{f}=\tilde{f}_{ij}\delta^i\otimes\delta^j,\;$则$\;f=\tilde{f}.$
+
+
+\noindent
+\\
+\\
+{\textbf{1.31\ 证：}}
+原行列式$=\sum_{\sigma}\delta_{i_1,...,i_r}^{\sigma(i_1),...,\sigma(i_r)} \delta_{j_1}^{\sigma(i_1)}\cdots\delta_{j_r}^{\sigma(i_r)}=\delta_{i_1,...,i_r}^{j_1,...,j_r}.$
+
+
+\noindent
+\\
+\\
+{\textbf{1.32\ 证：}}
+(1)\;记置换
+$$
+\pi=\left( 
+         \begin{array}{l}
+         i_1,\cdots , i_{r+s}
+         \\
+         j_1,\cdots, j_{r+s}
+         \end{array}
+    \right)
+\quad
+\pi_1=\left(
+          \begin{array}{c}
+          k_1,\cdots,k_r
+          \\
+          j_1,\cdots,j_r
+          \end{array}
+      \right)
+\quad
+\pi_2=\left(
+          \begin{array}{c}
+          i_1,\cdots,i_r,i_{r+1},\cdots,i_{r+s}
+          \\
+          k_1,\cdots,k_r,j_{r+1},\cdots,j_{r+s}
+          \end{array}
+      \right)
+$$
+则$\;\pi=\pi_1\pi_2,\;$从而$\;sgn(\pi)=sgn(\pi_1)\cdot sgn(\pi_2).$
+\\
+即，取定某排列$\;(l_1,\cdots,l_r),\;$有
+$$
+\delta_{j_1,\cdots,j_{r+s}}^{i_1,\cdots,i_{r+s}}=\delta_{j_1,\cdots,j_{r}}^{l_1,\cdots,l_r}\cdot\delta_{l_1,\cdots,l_r,j_{r+1},\cdots,j_{r+s}}^{i_1,\cdots,i_{r+s}}\quad(\text{注：此时不对上下指标求和})
+$$
+而$\;(l_1,\cdots,l_r)\;$的排列共有$\;r!\;$种取法.
+$$\therefore \delta_{j_1,\cdots,j_{r+s}}^{i_1,\cdots,i_{r+s}}=\frac{1}{r!}\sum_{k_1,\cdots,k_r}\delta_{j_1,\cdots,j_r}^{k_1,\cdots,k_r}\delta_{k_1,\cdots,k_r,j_{r+1},\cdots,j_{r+s}}^{i_1,\cdots,i_{r+s}}.$$
+
+(2)$$\delta_{i_1,\cdots,i_r}^{i_1,\cdots,i_r}=A_n^r=\frac{n!}{(n-r)!}.$$
+
+\noindent
+\\
+\\
+{\textbf{1.33\ 证：}}记$\;a=(\alpha_1,...,\alpha_n),\;$其中$\;\alpha_i=(a_i^1,...,a_i^n)^T$，则
+\begin{align*}
+\det a&=\det(\alpha_1,...,\alpha_n)
+      \\
+      &=\frac{1}{n!}\delta^{i_1,...,i_n}_{1,...,n} \det(\alpha_{i_1},...,\alpha_{i_n})
+      \\
+      &=\frac{1}{n!} \delta^{i_1,...,i_n}_{1,...,n} \delta_{j_1,...,j_n}^{1,...,n} a_{i_1}^{j_1}\cdots a_{j_n}^{i_n}
+      \\
+      &=\frac{1}{n!}\delta_{j_1,...,j_n}^{i_1,...,i_n}a_{i_1}^{j_1}\cdots a_{j_n}^{i_n}.
+\end{align*}
+
+
+\noindent
+\\
+\\
+{\textbf{1.34\ 证：}}
